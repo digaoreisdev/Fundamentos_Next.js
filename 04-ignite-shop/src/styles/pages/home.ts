@@ -1,4 +1,3 @@
-import { spawn } from "child_process";
 import { styled } from "..";
 
 export const HomeContainer = styled('main', {
@@ -31,6 +30,7 @@ export const Product = styled('a', {
     bottom: '0.25rem',
     left: '0.25rem',
     right: '0.25rem',
+    padding: '2rem',
     
     borderRadius: 6,
     
@@ -40,24 +40,25 @@ export const Product = styled('a', {
     
     backgroundColor: 'rgba(0, 0, 0, 0.6)',
     
-    transformm: 'translate(110%)',
+    transform: 'translate(110%)',
     opacity: 0,
-    transtion: 'all 0.2s ease-in-out',
+    transition: 'all 0.2s ease-in-out',
     
     strong: {
       fontSize: '$lg',
+      color: '$gray100',
     },
     
     span: {
-      fontSize: '$lg',
+      fontSize: '$xl',
       fontWeight: 'bold',
-      color: '$gree300',
+      color: '$green300',
     }
   },
   
   '&:hover': {
     footer: {
-      transform:'translatey(0%)',
+      transform:'translate(0%)',
       opacity: 1,
     }
   }

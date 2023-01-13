@@ -39,7 +39,7 @@ export default function Home({ products }: HomeProps) {
             
             <footer>
               <strong>{product.name}</strong>
-              <span>product.price</span>
+              <span>{product.price}</span>
             </footer>
           </Product>
         )
@@ -51,7 +51,6 @@ export default function Home({ products }: HomeProps) {
 export const getServerSideProps: GetServerSideProps = async () => {
   const response = await stripe.products.list({
     expand: ['data.default_price'],
-    active: true,
   })
   
   const products = response.data.map(product => {
